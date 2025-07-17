@@ -1,66 +1,115 @@
-            
-            
-            //bancodeimagens
-            let imagens = [
-                "https://t.ctcdn.com.br/93b35I56edm3bcmuCoRvK3xSBOk=/62x74:1213x722/640x360/smart/i335995.jpeg",
-                "https://t.ctcdn.com.br/6BSSH8Hcd3M1qjljj249YXCJ0bw=/660x0/smart/i494623.jpeg", 
-                "https://t.ctcdn.com.br/93b35I56edm3bcmuCoRvK3xSBOk=/62x74:1213x722/640x360/smart/i335995.jpeg",
-                "https://img.canaltech.com.br/canaltech-icon.svg",
-                "https://t.ctcdn.com.br/pSgq84YkapE0D4jYHHF75qTkIVQ=/1024x0/smart/i494613.jpeg",
-                "https://t.ctcdn.com.br/XHx7SwLeTfMkOFlIkHVtRXRmlog=/1024x0/smart/i494616.png",
-                "https://src.trvdp.com/images/310c9de922672c4aa4b8e11e7768c513e88d8646_2.jpg",
-                "https://ads.stickyadstv.com/auto-user-sync?_fw_gdpr=0&_fw_gdpr_consent=",
-                "https://ads.stickyadstv.com/user-matching?id=2545&_fw_gdpr=0&_fw_gdpr_consent=",
-                "https://t.ctcdn.com.br/6BSSH8Hcd3M1qjljj249YXCJ0bw=/660x0/smart/i494623.jpeg",
-                "https://t.ctcdn.com.br/RkJ6SRPW04lAm-ADivn97ralS0E=/660x0/smart/i494621.png",
-                "https://t.ctcdn.com.br/yQjzwXSoVEGiySB0OWfeKSoxzfY=/660x0/smart/i494615.jpeg",
-                "https://t.ctcdn.com.br/05N5tgdXlkIPyhJa_wt6Bn8fpp0=/1024x0/smart/i494617.png",
-                "https://conteudo.imguol.com.br/c/noticias/88/2022/03/14/colisao-de-bicicletas-1647266693556_v2_1920x1920.jpg.webp",
-                "https://conteudo.imguol.com.br/c/noticias/d1/2022/03/14/eu-consigo-voar-1647266691666_v2_150x150.jpg.webp",
-                "https://conteudo.imguol.com.br/c/noticias/06/2022/03/14/darth-vader-tambem-tira-o-lixo-1647266690151_v2_150x150.jpg.webp",
-                "https://conteudo.imguol.com.br/c/noticias/08/2022/03/14/vamos-observar-o-ceu-no-meio-da-estrada-1647266685722_v2_150x150.png.webp",
-                "https://conteudo.imguol.com.br/c/noticias/ae/2022/03/14/batman-prestes-a-entrar-em-acao-1647266677434_v2_150x150.jpg.webp",
-                "https://conteudo.imguol.com.br/c/noticias/0c/2022/03/14/algo-de-errado-nao-esta-certo-1647266672886_v2_150x150.png.webp",
-                "https://conteudo.imguol.com.br/c/noticias/42/2022/03/14/clones-de-luxo-1647266658135_v2_150x150.png.webp",
-                "https://conteudo.imguol.com.br/c/noticias/96/2022/03/14/exposicao-de-manequins-1647266653345_v2_150x150.png.webp",
-                "https://conteudo.imguol.com.br/c/noticias/73/2022/03/14/e-caiu-1647266652163_v2_150x150.jpg.webp",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/geral/3d/2021/05/25/placeholder-image-1621949831997_v2_300x225.jpg",
-                "https://conteudo.imguol.com.br/c/noticias/84/2022/06/23/retrato-solar-1656018906008_v2_300x225.jpg.webp",
-                "https://conteudo.imguol.com.br/c/noticias/eb/2022/06/15/superlua-de-morango-sobre-o-templo-de-posseidon-proximo-a-atenas-na-grecia-1655296577157_v2_300x225.jpg.webp",
-                "https://conteudo.imguol.com.br/c/noticias/54/2022/05/30/carnotauro-recriado-em-cgi-para-a-serie-documentarial-prehistoric-planet-da-appletv-1653914008445_v2_300x225.jpg.webp"
-                // Adicione mais URLs se quiser
-                
-            ];
-            //logicadagaleriadeimagens
-            let galeria = document.getElementById('galeria');
-            let botao = document.getElementById('btn');
-            let indice = 0;
-            let limite = 1;
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Imagens Bizarras do Google Street View</title>
 
-            botao.onclick = function () {
-                let final = indice + limite;
+    <!-- Meta Tags para SEO e compartilhamento -->
+    <meta name="description" content="Uma galeria com imagens bizarras e curiosas capturadas pelo Google Street View." />
+    <meta name="author" content="victorsaib" />
 
-                for (; indice < final && indice < imagens.length; indice++) {
-                    let imagem = document.createElement('img');
-                    imagem.width = 300;
-                    imagem.height = 300;
-                    imagem.src = imagens[indice];
-                    galeria.appendChild(imagem);
-                }
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:title" content="Imagens Bizarras do Google Street View" />
+    <meta property="og:description" content="Confira imagens estranhas, engraçadas e inesperadas flagradas pelas câmeras do Google Street View." />
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2c/Google_Street_View_car_front.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seudominio.com/imagens-bizarras.html" />
 
-                if (indice >= imagens.length) {
-                    botao.disabled = true;
-                    botao.textContent = 'Desativado';
-                }
-                //logicadagaleriadeimagens
-            };
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Imagens Bizarras do Google Street View" />
+    <meta name="twitter:description" content="Veja os registros mais bizarros do Google Street View em uma galeria divertida." />
+    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2c/Google_Street_View_car_front.jpg" />
 
+    <!-- Estilo CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+        }
+
+        #ads {
+            margin-bottom: 1em;
+        }
+
+        #ads a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #ff5722;
+            transition: color 0.3s ease;
+        }
+
+        #ads a:hover,
+        #ads a:focus {
+            color: #e64a19;
+            outline: none;
+        }
+
+        #galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        #galeria img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        #galeria img:hover,
+        #galeria img:focus {
+            transform: scale(1.05);
+            outline: none;
+        }
+
+        #btn {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #btn:hover,
+        #btn:focus {
+            background-color: #e64a19;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagens Bizarras do Google Street View</h1>
+
+    <div id="ads" role="complementary" aria-label="Publicidade">
+        <a href="https://victorxx.github.io/piadarandomico01/" target="_blank" rel="noopener noreferrer">
+            CONFIRA ESSA OPORTUNIDADE
+        </a>
+    </div>
+
+    <button id="btn" aria-label="Carregar imagens bizarras">Carregar Imagens</button>
+
+    <main id="galeria" aria-live="polite" aria-relevant="additions"></main>
+
+    <!-- Seu script JavaScript -->
+    <script src="imagens.js" defer></script>
+</body>
+</html>
